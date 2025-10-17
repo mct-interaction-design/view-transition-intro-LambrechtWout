@@ -1,3 +1,7 @@
+@view-transition {
+  navigation: auto;
+}
+
 :root {
     --color-purple: oklch(0.44 0.23 311.11);
     --color-pink: oklch(0.66 0.26 16.42);
@@ -23,6 +27,10 @@ html {
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 svg,
@@ -37,6 +45,7 @@ h1 {
     margin: 0;
 }
 
+
 /* objects */
 
 .list-reset {
@@ -46,27 +55,104 @@ h1 {
 
 /* components */
 
-.nav__list {}
+.nav {
+    display: flex;
+    justify-content: center;
+}
 
-.nav__item {}
+.nav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 1rem;
+}
 
-.nav__link {}
+.nav__item {
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.nav__item--one {
+    background-color: var(--color-purple);
+
+}
+
+.nav__item--two {
+    background-color: var(--color-pink);
+}
+
+.nav__item--three {
+    background-color: var(--color-yellow);
+}
+
+.nav__item--four {
+    background-color: var(--color-ocean);
+}
+
+.nav__link {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-family: 'Nunito';
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4rem;
+    cursor: pointer;
+}
 
 /* give the links a different background color */
 
-.page {}
+.page {
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: 100vh;
+    width: 100%;
+    margin: 1rem;
+    border-radius: 1rem;
+}
 
 /* give the pages a different background color */
 
-.page--one {}
+.page--one {
+    background-color: var(--color-purple);
+}
 
-.page--two {}
+.page--two {
+    background-color: var(--color-pink);
+}
 
-.page--three {}
+.page--three {
+    background-color: var(--color-yellow);
+}
 
-.page--four {}
+.page--four {
+    background-color: var(--color-ocean);
+}
 
-.page__back {}
+.page__back {
+    margin-left: auto;
+    align-self: flex-start;
+}
 
-.page__body,
-.page__back {}
+.page__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.page__body h1,p {
+    color: white;
+}
+
+.page__back {
+    display: flex;
+}

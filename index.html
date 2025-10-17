@@ -15,10 +15,18 @@
 <body>
     <nav class="nav">
         <ul class="nav__list list-reset">
-            <li class="nav__item nav__item--one"><a href="one/" class="nav__link nav__link--one">Page 1</a></li>
-            <li class="nav__item nav__item--two"><a href="two/" class="nav__link nav__link--two">Page 2</a></li>
-            <li class="nav__item nav__item--three"><a href="three/" class="nav__link nav__link--three">Page 3</a></li>
-            <li class="nav__item nav__item--four"><a href="four/" class="nav__link nav__link--four">Page 4</a></li>
+            <li class="nav__item nav__item--one" style="view-transition-name: page--one;">
+                <a href="one/" class="nav__link nav__link--one"><span style="view-transition-name: page--one__body;">One</span></a>
+            </li>
+            <li class="nav__item nav__item--two" style="view-transition-name: page--two;">
+                <a href="two/" class="nav__link nav__link--two"><span style="view-transition-name: page--two__body;">Two</span></a>
+            </li>
+            <li class="nav__item nav__item--three" style="view-transition-name: page--three;">
+                <a href="three/" class="nav__link nav__link--three"><span style="view-transition-name: page--three__body;">Three</span></a>
+            </li>
+            <li class="nav__item nav__item--four" style="view-transition-name: page--four;">
+                <a href="four/" class="nav__link nav__link--four"><span style="view-transition-name: page--four__body;">Four</span></a>
+            </li>
         </ul>
     </nav>
 </body>
